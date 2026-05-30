@@ -1,0 +1,16 @@
+# Claude Code — keep all harness files local and off the public repo
+.claude/
+
+# Lab artifacts that should never be committed
+*.pcap
+*.cap
+*.log
+captures/
+malware-analysis/samples/
+malware-analysis/unpacked/
+
+# OS / editor
+.DS_Store
+*.swp
+*~
+.vscode/
