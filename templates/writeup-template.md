@@ -1,8 +1,13 @@
-# [Lab/Machine Name] — Writeup
+# [Machine Name] — Writeup
 
-**Date:** YYYY-MM-DD  
-**Difficulty:** Easy / Medium / Hard  
-**Category:** Web / Network / AD / Malware / OSINT  
+> Use this template for real deployed machines: DVWA, Metasploitable, VulnHub, HackTheBox, TryHackMe boxes.
+> For PortSwigger / platform labs, use `writeup-platform-lab.md` instead.
+
+**Date:** YYYY-MM-DD
+**Difficulty:** Easy / Medium / Hard
+**Platform:** DVWA / Metasploitable / VulnHub / HackTheBox / TryHackMe
+**OS:** Linux / Windows
+**Category:** Web / Network / AD / Malware / OSINT
 **Tools used:**
 
 ---

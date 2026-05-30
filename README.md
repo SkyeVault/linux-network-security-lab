@@ -1,30 +1,63 @@
 # Linux Network Security Lab
 
-A hands-on lab built on Proxmox for practicing and documenting offensive and defensive security techniques. Every project here includes a writeup explaining the goal, setup, findings, and takeaways.
+An active learning security lab with three tracks: systematic platform-based study, real enterprise infrastructure on Proxmox with live public IPs, and hands-on exploitation of deployed vulnerable machines. Everything generates writeups.
 
-## Lab Architecture
+---
 
-The lab runs on a Proxmox hypervisor with isolated network segments — an attacker VM, victim VMs, and a dedicated monitoring VM on separate VLANs so traffic flows through inspection points.
+## Track 1 — Learning Path (PortSwigger Web Security Academy)
 
-See [`architecture/`](architecture/) for network diagrams and the full topology.
+Working through the full PortSwigger curriculum in order. Each topic has a tracker and individual writeups per lab.
 
-## Projects
+| Topic | Progress |
+|---|---|
+| [SQL Injection](portswigger/sql-injection/) | 6 / 18 |
+| Authentication | Planned |
+| Path Traversal | Planned |
+| OS Command Injection | Planned |
+| XSS | Planned |
+| ... | |
 
-| Project | Description | Status |
+[Full topic list and progress →](portswigger/)
+
+---
+
+## Track 2 — Real Network Infrastructure
+
+A production Proxmox node with two public IPv4 addresses and dual /64 IPv6 subnets. Internet-facing — honeypots, sensors, and SIEM are live. Configuration and runbooks documented here; IPs are kept local.
+
+| Component | Description |
+|---|---|
+| [Architecture](real-network/architecture/) | VLAN topology, bridge design, IPv6 addressing |
+| [Gateway / Firewall](real-network/gateway/) | OPNsense per WAN, firewall rule philosophy |
+| [Services](real-network/services/) | Honeypot, SIEM, network monitoring |
+| [Runbooks](real-network/runbooks/) | New VM, firewall changes, incident response |
+
+[Real network documentation →](real-network/)
+
+---
+
+## Track 3 — Deployed Machine Labs
+
+Hands-on exploitation of deliberately vulnerable machines running in the lab. Writeups cover full compromise chains — recon through post-exploitation — with a blue team detection angle on each.
+
+| Lab | Description | Status |
 |---|---|---|
-| [Vulnerable Network](labs/vulnerable-network/) | DVWA, Metasploitable, VulnHub — active exploitation and writeups | In progress |
-| [SIEM](labs/siem/) | Wazuh deployed on Proxmox; detecting attack traffic I generate myself | Planned |
-| [Active Directory Lab](labs/active-directory/) | Build a Windows AD environment then attack it with common techniques | Planned |
-| [Honeypot](labs/honeypot/) | OpenCanary deployment, traffic analysis, and attacker behavior patterns | Planned |
-| [Malware Analysis](labs/malware-analysis/) | FlareVM + REMnux sandbox for static and dynamic analysis | Planned |
-| [Network Monitoring](labs/network-monitoring/) | Zeek / Suricata for traffic capture, alerting, and anomaly detection | Planned |
+| [Vulnerable Network](labs/vulnerable-network/) | DVWA, Metasploitable 2, VulnHub machines | Planned |
+| [Active Directory](labs/active-directory/) | Windows AD built to attack — Kerberoasting, DCSync, BloodHound | Planned |
+| [Honeypot](labs/honeypot/) | OpenCanary — deployed, collecting real traffic | Planned |
+| [Malware Analysis](labs/malware-analysis/) | FlareVM + REMnux sandbox | Planned |
+| [SIEM](labs/siem/) | Wazuh — detecting attacks generated from Track 3 machines | Planned |
+| [Network Monitoring](labs/network-monitoring/) | Zeek + Suricata on span port | Planned |
 
-## Tools Used
+---
 
-**Offensive:** Metasploit, Burp Suite, nmap, gobuster, hydra, Impacket  
+## Tools
+
+**Offensive:** Metasploit, Burp Suite, nmap, gobuster, hydra, Impacket, BloodHound  
 **Defensive:** Wazuh, Zeek, Suricata, OpenCanary  
-**Infrastructure:** Proxmox, pfSense/OPNsense, VLANs
+**Infrastructure:** Proxmox, OPNsense, VLANs
 
-## Writeup Format
+## Templates
 
-Each lab follows the same structure so findings are comparable and reproducible. See [`templates/writeup-template.md`](templates/writeup-template.md).
+- [Platform lab writeup](templates/writeup-platform-lab.md) — PortSwigger, HTB Academy, THM
+- [Machine writeup](templates/writeup-template.md) — DVWA, Metasploitable, VulnHub, HTB boxes

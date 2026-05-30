@@ -1,21 +1,25 @@
-# Vulnerable Network Lab
+# Vulnerable Machine Lab
 
-## Overview
+Writeups for hands-on exploitation of deliberately vulnerable machines deployed in the Proxmox lab. This is Track 3 — real attack chains against real deployed targets, not platform-guided labs.
 
-A deliberately vulnerable network segment containing DVWA, Metasploitable 2, and VulnHub machines. The goal is to attack these systems using real tools and techniques, then document findings in reproducible writeups.
+For PortSwigger Web Security Academy labs, see [`../../portswigger/`](../../portswigger/).
 
-## Targets
+## Planned Targets
 
-| Machine | IP | Services | Focus |
+| Machine | VLAN | IP | Focus |
 |---|---|---|---|
-| DVWA | 10.0.20.10 | HTTP (80) | Web app vulnerabilities |
-| Metasploitable 2 | 10.0.20.11 | Multiple | Network services, misconfigs |
-| VulnHub (varies) | 10.0.20.20+ | Varies | Full machine compromise |
+| DVWA | 20 | 10.0.20.10 | Web app vulnerabilities — SQLi, XSS, CSRF, file upload, command injection |
+| Metasploitable 2 | 20 | 10.0.20.11 | Network services, misconfigured daemons, Samba, vsftpd |
+| VulnHub (rotating) | 20 | 10.0.20.20+ | Full machine compromise — boot to root |
 
 ## Setup
 
-See [`setup/`](setup/) for provisioning steps and Proxmox VM configuration.
+See [`setup/`](setup/) for Proxmox provisioning steps. These machines are air-gapped on VLAN 20 — no internet access.
 
 ## Writeups
 
-See [`writeups/`](writeups/) for individual attack writeups. Each follows the standard format in [`../../templates/writeup-template.md`](../../templates/writeup-template.md).
+See [`writeups/`](writeups/) for completed attack writeups. Each uses [`../../templates/writeup-template.md`](../../templates/writeup-template.md), covering recon through post-exploitation with a blue team detection section.
+
+## When this comes online
+
+This section fills in once the Proxmox real-network infrastructure (Track 2) is deployed. The victim VLAN will be isolated from the monitoring VLAN, and Wazuh agents on these machines will generate real alerts from attacks run against them.
