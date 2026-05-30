@@ -1,10 +1,10 @@
 # Linux Network Security Lab
 
-An active learning security lab with three tracks: systematic platform-based study, real enterprise infrastructure on Proxmox with live public IPs, and hands-on exploitation of deployed vulnerable machines. Everything generates writeups.
+An active learning security lab with three tracks: systematic platform-based study, real enterprise infrastructure on Proxmox with live public IPs, and hands-on exploitation of deployed vulnerable machines. Writeups reflect the nature of the research, the goals for each process, and the learning process through hands-on experience.
 
 ---
 
-## Track 1 — Learning Path (PortSwigger Web Security Academy)
+## Track 1 - Learning Path (PortSwigger Web Security Academy)
 
 Working through the full PortSwigger curriculum in order. Each topic has a tracker and individual writeups per lab.
 
@@ -21,9 +21,9 @@ Working through the full PortSwigger curriculum in order. Each topic has a track
 
 ---
 
-## Track 2 — Real Network Infrastructure
+## Track 2 - Real Network Infrastructure
 
-A production Proxmox node with two public IPv4 addresses and dual /64 IPv6 subnets. Internet-facing — honeypots, sensors, and SIEM are live. Configuration and runbooks documented here; IPs are kept local.
+A production Proxmox node with two public IPv4 addresses and dual /64 IPv6 subnets. Internet-facing - honeypots, sensors, and SIEM are live. Configuration and runbooks documented here; IPs are kept local.
 
 | Component | Description |
 |---|---|
@@ -36,17 +36,17 @@ A production Proxmox node with two public IPv4 addresses and dual /64 IPv6 subne
 
 ---
 
-## Track 3 — Deployed Machine Labs
+## Track 3 - Deployed Machine Labs
 
-Hands-on exploitation of deliberately vulnerable machines running in the lab. Writeups cover full compromise chains — recon through post-exploitation — with a blue team detection angle on each.
+Hands-on exploitation of deliberately vulnerable machines running in the lab. Writeups cover full compromise chains - recon through post-exploitation - with a blue team detection angle on each.
 
 | Lab | Description | Status |
 |---|---|---|
 | [Vulnerable Network](labs/vulnerable-network/) | DVWA, Metasploitable 2, VulnHub machines | Planned |
-| [Active Directory](labs/active-directory/) | Windows AD built to attack — Kerberoasting, DCSync, BloodHound | Planned |
-| [Honeypot](labs/honeypot/) | OpenCanary — deployed, collecting real traffic | Planned |
+| [Active Directory](labs/active-directory/) | Windows AD built to attack - Kerberoasting, DCSync, BloodHound | Planned |
+| [Honeypot](labs/honeypot/) | OpenCanary - deployed, collecting real traffic | Planned |
 | [Malware Analysis](labs/malware-analysis/) | FlareVM + REMnux sandbox | Planned |
-| [SIEM](labs/siem/) | Wazuh — detecting attacks generated from Track 3 machines | Planned |
+| [SIEM](labs/siem/) | Wazuh - detecting attacks generated from Track 3 machines | Planned |
 | [Network Monitoring](labs/network-monitoring/) | Zeek + Suricata on span port | Planned |
 
 ---
@@ -59,5 +59,5 @@ Hands-on exploitation of deliberately vulnerable machines running in the lab. Wr
 
 ## Templates
 
-- [Platform lab writeup](templates/writeup-platform-lab.md) — PortSwigger, HTB Academy, THM
-- [Machine writeup](templates/writeup-template.md) — DVWA, Metasploitable, VulnHub, HTB boxes
+- [Platform lab writeup](templates/writeup-platform-lab.md) - PortSwigger, HTB Academy, THM
+- [Machine writeup](templates/writeup-template.md) - DVWA, Metasploitable, VulnHub, HTB boxes
