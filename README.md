@@ -1,6 +1,6 @@
 # Linux Network Security Lab
 
-A hands-on homelab built on Proxmox for practicing and documenting offensive and defensive security techniques. Every project here includes a writeup explaining the goal, setup, findings, and takeaways.
+A hands-on lab built on Proxmox for practicing and documenting offensive and defensive security techniques. Every project here includes a writeup explaining the goal, setup, findings, and takeaways.
 
 ## Lab Architecture
 
