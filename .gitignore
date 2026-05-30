@@ -1,6 +1,14 @@
 # Claude Code — keep all harness files local and off the public repo
 .claude/
 
+# Real network — IPs, credentials, host-specific config never go public
+.env
+.env.local
+real-network/**/*.conf
+real-network/**/*.key
+real-network/**/*.pem
+real-network/**/inventory.md
+
 # Lab artifacts that should never be committed
 *.pcap
 *.cap
