@@ -10,7 +10,7 @@ Working through the full PortSwigger curriculum in order. Each topic has a track
 
 | Topic | Progress |
 |---|---|
-| [SQL Injection](portswigger/sql-injection/) | 6 / 18 |
+| [SQL Injection](portswigger/sql-injection/) | IP |
 | Authentication | Planned |
 | Path Traversal | Planned |
 | OS Command Injection | Planned |
